@@ -1,0 +1,23 @@
+#include <stdio.h> 
+int main() {
+	int i, j, N = 0;
+	char current_char = 'A';
+
+	printf("Enter N: ");
+	scanf_s("%d", &N);
+
+	for (i = 1; i <= N; i++) {
+
+		for (j = 1; j <= i; j++) {
+			printf("%c", current_char);
+			current_char++;
+
+			if (current_char > 'Z') {
+				current_char = 'A';
+			}
+		}
+
+		printf("\n"); 
+	}
+	return 0;
+}
