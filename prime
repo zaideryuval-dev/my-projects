@@ -1,0 +1,25 @@
+#include <stdio.h>
+int main() {
+	int n, i;
+	int found_divisor = 0;
+	printf("Enter integer number\n");
+	scanf_s("%d", &n); // Fixed format string
+
+	if (n <= 1) { // Fixed if statement syntax
+		printf("number is not prime");
+		return 0;
+	}
+
+	for (i = n - 1; i >= 2; i--) { // Fixed for loop syntax
+		if (n % i == 0) { // Fixed if statement syntax
+			printf("number is not prime. largest divisor:%d\n", i);
+			found_divisor = 1;
+			break;
+		}
+	}
+
+	if (found_divisor == 0) {
+		printf("the number is prime.\n");
+	}
+	return 0;
+}
